@@ -1,0 +1,4 @@
+{
+  "Export to PDF": "A toolbar button tooltip for a PDF export feature.",
+  "An error occurred while generating the PDF.": "An error message shown to the user when an error occurred during the generation of the PDF file."
+}

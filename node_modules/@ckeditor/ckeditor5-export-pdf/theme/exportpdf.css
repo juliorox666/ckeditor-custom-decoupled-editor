@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ */
+
+/* TODO
+	Extract theme-lark styles before public release.
+*/
+
+:root {
+	--ck-toolbar-spinner-size: 18px;
+}
+
+.ck-exportpdf_status-pending {
+	position: relative;
+}
+
+.ck.ck-exportpdf__spinner-container {
+	display: none;
+}
+
+.ck.ck-exportpdf__spinner {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: var(--ck-toolbar-spinner-size);
+	height: var(--ck-toolbar-spinner-size);
+	border-radius: 50%;
+	border: 2px solid var(--ck-color-text);
+	border-top-color: transparent;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.ck-exportpdf_status-pending .ck.ck-exportpdf__spinner-container {
+	display: block;
+	position: absolute;
+	width: var(--ck-toolbar-spinner-size);
+	height: var(--ck-toolbar-spinner-size);
+	animation: 1.5s infinite rotate linear;
+}
+
+.ck-exportpdf_status-pending .ck.ck-button__icon {
+	color: transparent;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg)
+	}
+}
